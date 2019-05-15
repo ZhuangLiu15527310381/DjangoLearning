@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Blog Info</title>
+</head>
+<body >
+<form action="/update{{ blog.id }}" method="post">
+    {% csrf_token %}
+   <font color="red" size="7">Title：</font>
+    <input type="text" name="title" value="{{ blog.title }}"><br>
+    <font color="red" size="7">Author：</font>
+    <input type="text" name="author" size="7" value="{{ blog.author_name }}"><br>
+    <font color="red" size="7">Body：</font>
+    <textarea name="body" rows="5" cols="60" placeholder="{{ blog.body }}"></textarea><br>
+    <input type="submit">
+</form>
+</body>
+</html>
